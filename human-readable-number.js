@@ -1,15 +1,14 @@
-module.exports = function toReadable (num) {
-    const arrUnits = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-    const arrTens10_19 = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-    const arrTens20_90 = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-    
-    let units;
-    let tens;
-    let hundreds;
-    let ans;
+const arrUnits = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+const arrTens10_19 = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const arrTens20_90 = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
+let units;
+let tens;
+let hundreds;
+let ans;
+
+const toReadable = (num) => {
     num = num.toString()
-    
     if (num == 0) {
         return('zero');
     //единицы:
@@ -63,3 +62,5 @@ module.exports = function toReadable (num) {
         return(ans);
     }     
 }
+
+toReadable (0);
